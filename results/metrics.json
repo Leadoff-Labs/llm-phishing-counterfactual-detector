@@ -1,0 +1,62 @@
+{
+  "cmp1_counterfactual_pairs": {
+    "total_pairs": 2074,
+    "valid_pairs": 2074,
+    "n_attempted": 5557,
+    "pct_valid": 37.322296202987225,
+    "stats": {
+      "n_legitimate_input": 2000,
+      "n_phishing_input": 3557,
+      "n_phishing_skipped_no_category": 3483,
+      "n_phishing_used": 74
+    }
+  },
+  "cmp2_ranker_training": {
+    "n_train_pairs": 1660,
+    "n_val_pairs": 414,
+    "val_ranking_accuracy": 0.9927536231884058
+  },
+  "cmp3_optimizer": {
+    "best_iteration": 47
+  },
+  "evaluation": {
+    "novel": {
+      "overall": {
+        "recall": 0.47,
+        "false_positive_rate": 0.11,
+        "precision": 0.8650306748466258,
+        "f1": 0.6090712742980561,
+        "n": 7500
+      },
+      "recall_llm_phishing": 1.0,
+      "recall_traditional_phishing": 0.205,
+      "recall_all_phishing": 0.47,
+      "false_positive_rate_legit": 0.11,
+      "precision": 0.8650306748466258,
+      "f1": 0.6090712742980561,
+      "threshold_used": -1.8460516546504406,
+      "throughput_emails_per_sec": 397.23772117284614
+    },
+    "baseline": {
+      "overall": {
+        "recall": 0.264,
+        "false_positive_rate": 0.17133333333333334,
+        "precision": 0.6980023501762632,
+        "f1": 0.3831022250886811,
+        "n": 7500
+      },
+      "recall_llm_phishing": 0.18066666666666667,
+      "recall_traditional_phishing": 0.30566666666666664,
+      "recall_all_phishing": 0.264,
+      "false_positive_rate_legit": 0.17133333333333334,
+      "precision": 0.6980023501762632,
+      "f1": 0.3831022250886811
+    },
+    "test_set_counts": {
+      "total": 7500,
+      "legitimate": 3000,
+      "traditional_phishing": 3000,
+      "llm_generated_phishing": 1500
+    }
+  }
+}
