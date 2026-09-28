@@ -1,0 +1,48 @@
+<mxfile host="app.diagrams.net" version="24.0.0">
+  <diagram name="CMP-1 Internal Logic" id="fig2cmp1logic">
+    <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1180" pageHeight="620" math="0" shadow="0" background="#FFFFFF">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <mxCell id="legit" value="Legitimate Email" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#D5E8D4;strokeColor=#000000;strokeWidth=2;fontColor=#000000;fontSize=16;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="20" y="40" width="200" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="assign" value="Assign Category&#10;(round-robin)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#DAE8FC;strokeColor=#000000;strokeWidth=2;fontColor=#000000;fontSize=16;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="280" y="40" width="210" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="appendA" value="Append Family-A&#10;Risky Clause" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#DAE8FC;strokeColor=#000000;strokeWidth=2;fontColor=#000000;fontSize=16;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="550" y="40" width="220" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="phishcf" value="Phishing&#10;Counterfactual" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFE6CC;strokeColor=#000000;strokeWidth=2;fontColor=#000000;fontSize=16;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="830" y="40" width="200" height="70" as="geometry" />
+        </mxCell>
+
+        <mxCell id="phish" value="Phishing Email" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#D5E8D4;strokeColor=#000000;strokeWidth=2;fontColor=#000000;fontSize=16;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="20" y="260" width="200" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="dec" value="Matches a&#10;category?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#FFF2CC;strokeColor=#000000;strokeWidth=2;fontColor=#000000;fontSize=16;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="280" y="235" width="210" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="strip" value="Strip Sentence +&#10;Neutral Clause" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#DAE8FC;strokeColor=#000000;strokeWidth=2;fontColor=#000000;fontSize=16;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="550" y="260" width="220" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="benigncf" value="Benign&#10;Counterfactual" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFE6CC;strokeColor=#000000;strokeWidth=2;fontColor=#000000;fontSize=16;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="830" y="260" width="200" height="70" as="geometry" />
+        </mxCell>
+
+        <mxCell id="skip" value="Skip - No Pair" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#F8CECC;strokeColor=#000000;strokeWidth=2;fontColor=#000000;fontSize=16;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="310" y="450" width="180" height="60" as="geometry" />
+        </mxCell>
+
+        <mxCell id="e1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;strokeWidth=2;endArrow=block;endFill=1;fontColor=#000000;fontSize=16;" edge="1" parent="1" source="legit" target="assign"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;strokeWidth=2;endArrow=block;endFill=1;fontColor=#000000;fontSize=16;" edge="1" parent="1" source="assign" target="appendA"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;strokeWidth=2;endArrow=block;endFill=1;fontColor=#000000;fontSize=16;" edge="1" parent="1" source="appendA" target="phishcf"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;strokeWidth=2;endArrow=block;endFill=1;fontColor=#000000;fontSize=16;" edge="1" parent="1" source="phish" target="dec"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e5" value="yes" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;strokeWidth=2;endArrow=block;endFill=1;fontColor=#000000;fontSize=16;" edge="1" parent="1" source="dec" target="strip"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;strokeWidth=2;endArrow=block;endFill=1;fontColor=#000000;fontSize=16;" edge="1" parent="1" source="strip" target="benigncf"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e7" value="no" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;strokeWidth=2;endArrow=block;endFill=1;fontColor=#000000;fontSize=16;" edge="1" parent="1" source="dec" target="skip"><mxGeometry relative="1" as="geometry" /></mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
